@@ -47,7 +47,7 @@ class ReverseProxied(object):
         return self.app(environ, start_response)
 
 app = Flask(__name__)
-app.config['BABEL_DEFAULT_LOCALE'] = 'fr'
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = config.BABEL_TRANSLATION_DIRECTORIES
 babel = Babel(app)
 #app.wsgi_app = ReverseProxied(app.wsgi_app)
